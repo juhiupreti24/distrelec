@@ -1,0 +1,17 @@
+.slider {
+    border: 1px solid black;
+}
+
+.btn-primary {
+    width: 100%;
+    background-color: $button-green;
+    border-color: $button-green;
+
+    &:hover {
+        opacity: 0.6;
+    }
+}
+
+.card-body {
+    border-top: 1px solid rgba(0, 0, 0, 0.125);
+}

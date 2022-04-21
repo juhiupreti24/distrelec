@@ -1,0 +1,32 @@
+<section>
+    <header class="text-center">
+      <h2 class="mt-4">Related products</h2>
+    </header>
+    <div class="container">
+      <div class="row">
+        <div class="col-10 offset-1">
+          
+          <owl-carousel-o [options]="customOptions" (dragging)="isDragging = $event.dragging">
+            
+            <ng-container *ngFor="let item of carouselData; let i=index">
+              <ng-template carouselSlide>
+                <div class="card" style="width: 18rem;">
+                  <img class="card-img-top" src={{item.productImageUrl}} alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">{{item.name}}</h5>
+                    <p class="card-text">Stock</p>
+                    <h6>{{item.price.currency}} {{item.price.formattedValue}}</h6>
+                    <a href="#" class="btn btn-primary">Buy now</a>
+                  </div>
+                </div>
+              </ng-template>
+            </ng-container>
+            
+          </owl-carousel-o>
+    
+        </div> <!-- /.col-sm-10 col-sm-offset-1 -->
+        
+      </div> <!-- row -->
+      
+    </div> <!-- /.container -->
+  </section>
