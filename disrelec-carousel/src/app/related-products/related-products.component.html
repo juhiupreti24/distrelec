@@ -10,7 +10,7 @@
             
             <ng-container *ngFor="let item of carouselData; let i=index">
               <ng-template carouselSlide>
-                <div class="card" style="width: 18rem;">
+                <!-- <div class="card">
                   <img class="card-img-top" src={{item.productImageUrl}} alt="Card image cap">
                   <div class="card-body">
                     <h5 class="card-title">{{item.name}}</h5>
@@ -18,7 +18,26 @@
                     <h6>{{item.price.currency}} {{item.price.formattedValue}}</h6>
                     <a href="#" class="btn btn-primary">Buy now</a>
                   </div>
-                </div>
+                </div> -->
+
+                  <div class="card-info text-center">
+                    <div class="card-wrapper">
+                      <div class="card-image">
+                        <img src={{item.productImageUrl}}>
+                      </div>
+                    </div>
+                    <div class="card-content">
+                      <h4>{{item.name}}</h4>
+                      <div class="description">
+                        <p>Stock</p>
+                        <h6>{{item.price.currency}} {{item.price.formattedValue}}</h6>
+                      </div>
+                      <div class="card-btn-wrapper">
+                        <a href="#" class="btn btn-primary">Buy now</a>
+                      </div>
+                    </div>
+                  </div>
+
               </ng-template>
             </ng-container>
             

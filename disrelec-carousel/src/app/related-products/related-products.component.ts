@@ -3,6 +3,7 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 import { HttpClient } from '@angular/common/http';
 // import { CarouselData } from '../app.component';
 import * as data from './../../assets/json/data.json';
+// import * as data from './../../assets/png/next.png';
 
 @Component({
   selector: 'app-related-products',
@@ -17,9 +18,10 @@ export class RelatedProductsComponent implements OnInit {
     mouseDrag: true,
     touchDrag: true,
     dots: false,
-    autoHeight: false,
+    autoHeight: true,
     nav: true,
-    navText: [ '<i class="fa-solid fa-arrow-left"></i>', '<i class="fa-solid fa-arrow-right"></i>' ],
+    navText: [ '<i class="fa fa-angle-left">', '<i class="fa fa-angle-right">' ],
+    // navText:["<div class='nav-btn prev-slide'><img src='./../../assets/png/next.png' /></div>","<div class='nav-btn next-slide'></div>"],
     responsiveClass: 'owl-responsive',
     responsive: {
       0: {

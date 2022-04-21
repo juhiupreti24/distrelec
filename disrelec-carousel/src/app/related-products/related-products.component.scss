@@ -1,17 +1,103 @@
-.slider {
-    border: 1px solid black;
-}
-
 .btn-primary {
-    width: 100%;
-    background-color: $button-green;
-    border-color: $button-green;
-
+    background-color: #545A5E;
+    border-color: #545A5E;
+    border-radius: 0;
     &:hover {
         opacity: 0.6;
     }
 }
 
-.card-body {
-    border-top: 1px solid rgba(0, 0, 0, 0.125);
+::ng-deep {
+    .owl-carousel {
+        .prev-slide, .next-slide{
+            background: transparent !important;
+            img {
+                width: 20px;
+            }
+        }
+    }
+    .owl-theme {
+        .owl-nav {
+            width: 100%;
+            top:35%;
+            position: absolute;
+            .owl-prev, .owl-next {
+                background: white !important;
+                color: black !important;
+                font-size: 30px;
+                position: absolute;
+            }
+
+            .owl-prev {
+                left: -30px;
+            }
+            .owl-next {
+                right: -30px;
+            }
+        }
+    }
 }
+
+.card-info{
+    margin: 0 10px 45px 10px;
+
+    .card-wrapper{
+        position: relative;
+        z-index: 1;
+        margin-bottom: 15px;
+        .card-image {
+            margin-bottom: -80px;
+            display: inline-block;
+            img{
+                max-width: 200px;
+            }
+        }
+    }
+    .card-content{
+        padding: 80px 20px 20px;
+        border: 4px solid rgba(97,97,97,.09);
+        position: relative;
+        line-height: 1.7;
+        .description{
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        h4{font-size: 16px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        height:40px}
+        .card-btn-wrapper{    margin-bottom: -40px;
+            position: relative;
+            padding-top: 15px;
+            z-index: 2;
+        }
+    }
+
+
+}
+
+.text-center{text-align:center!important;}
+
+.text-black {
+    color: black !important;
+}
+
+
+@media screen and (max-width: 767px) {
+    .card-info {
+        width: 87%;
+    }
+}
+
+// @media screen and (min-width: 767px ) {
+//     .card-info {
+//         width: 87%;
+//     }
+// }
+
